@@ -1,6 +1,11 @@
-#Escribir un programa que lea dos palabras y las compare. ¿Por qué
-#del resultado?
-palabra1 = input("Ingresa la primera palabra: ")
-palabra2 = input("Ingresa la segunda palabra: ")
+import random
+import os
 
-print(palabra1 == palabra2)
+def lanzar_datos():
+    num = random.randint(1,6)
+    return num
+
+
+print(lanzar_datos())
+print(lanzar_datos())
+print(lanzar_datos())

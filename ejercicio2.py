@@ -1,13 +1,16 @@
-#Escribí un programa que solicite al usuario ingresar la cantidad de
-#kilómetros recorridos por una motocicleta y la cantidad de litros de
-#combustible que consumió durante ese recorrido. Mostrar el
-#consumo de combustible por kilómetro
-
-kilometros = float(input("Introduce los kilómetros recorridos: "))
-
-litros = float(input("Introduce los litros de combustible consumidos: "))
-
-
-consumo_por_km = litros / kilometros
-
-print("Consumo de combustible por kilómetro:", consumo_por_km)
+import os
+resp = 1
+while resp !=0:
+ print("Paint(1)")
+ print("Calc (2)")
+ print("Apagar PC en 2 hora (3)")
+ print("Salir(0)")
+ resp = int (input("Seleccione:"))
+ if(resp==1):
+    os.system("mspaint")
+ elif(resp== 2):
+   os.system("calc")
+ elif(resp==3):
+   os.system("shutdown -s -t 7200")
+ else:
+   print("No entiendo esa orden")
