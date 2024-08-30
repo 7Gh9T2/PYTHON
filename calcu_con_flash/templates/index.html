@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            padding: 8px;
+        }
+        input, select, button {
+            padding: 7px;
+            font-size: 1em;
+            width: 120px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        .result {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="form-container">
+        <input type="number" id="num1" placeholder="Número 1">
+        <input type="number" id="num2" placeholder="Número 2">
+        <select id="operation">
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+        </select>
+        <button onclick="calcular()">Calcular</button>
+    </div>
+
+    <div class="result" id="result">Resultado: --</div>
+
+    <script>
+        function calcular() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operation = document.getElementById("operation").value;
+            let result;
+
+            switch(operation) {
+                case "sumar":
+                    result = num1 + num2;
+                    break;
+                case "restar":
+                    result = num1 - num2;
+                    break;
+                case "multiplicar":
+                    result = num1 * num2;
+                    break;
+                case "dividir":
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = "Operación no válida";
+            }
+
+            document.getElementById("result").textContent = `Resultado: ${result}`;
+        }
+    </script>
+</body>
+</html>
