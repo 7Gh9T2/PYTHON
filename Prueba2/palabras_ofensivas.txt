@@ -1,0 +1,5 @@
+palabras_ofensivas = [
+    'maldicion',
+    'idiota',
+    'estupido'
+]
